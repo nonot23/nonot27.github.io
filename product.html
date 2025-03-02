@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="container mx-auto p-4 ">
+        <nav class="flex   justify-between items-center  ">
+            <div class="flex  items-center space-x-5">
+                <button id="menuToggle" class="lg:hidden text-blue-700 text-[25px]  hover:cursor-pointer">
+                    ☰
+                </button>
+                <p class="text-[30px] font-Permanent Marker font-serif text-blue-700"><a href="index.html">Shoes</a>
+                </p>
+            </div>
+
+
+            <ul id="menuList"
+                class="hidden absolute  left-0 top-14 w-full bg-blue-400 p-4 text-white font-bold lg:text-black space-y-3  lg:ml-[400px] lg:p-0  lg:static lg:flex  lg:space-x-10 lg:space-y-0 lg:items-center lg:bg-transparent z-50 rounded-md shadow-md lg:shadow-none">
+                <li class="hover:underline"><a href="index.html">หน้าแรก</a></li>
+                <li class="hover:underline"><a href="product.html">สินค้า</a></li>
+                <li class="hover:underline"><a href="product.html">เกี่ยวกับ</a></li>
+                <li class="hover:underline"><a href="product.html">ติดต่อ</a></li>
+            </ul>
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center relative">
+                    <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="lg:hidden size-6 hover:cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </div>
+
+                <div class="absolute top-5 left-[32%] lg:relative lg:top-0 lg:left-0">
+                    <input type="search" id="searchBox" placeholder="Search"
+                        class="hidden lg:block max-w-[150px]  bg-gray-700 border border-gray-300 p-2 rounded cursor-pointer">
+                </div>
+
+                <div id="cart" class="flex items-center space-x-4 md:mt-0 hover:cursor-pointer ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6 md:right-0">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+
+                </div>
+            </div>
+        </nav>
+        <div id="cartmenu" class="absolute -top-1 left-[79%] bg-blue-400 w-[400px] h-auto z-50 hidden text-white">
+            <button id="closemenu" class="bg-yellow-500 w-[80px] h-[30px] ml-[320px]">Close</button>
+            <h2 class="text-center text-[20px] mt-5  bg-yellow-500 mx-10">Shopping Cart</h2>
+            <div id="cartItem" class="text-center mt-5 p-4">สินค้าในตระกร้าว่าง</div>
+            <div class="flex justify-between p-4 text-[18px] border-t-2  mt-5">
+                <h3>Total</h3>
+                <h2 id="total">฿0</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mx-auto px-2 font-kanit mt-10">
+            <div class="flex items-center justify-center p-4 font-kanit bg-black md:mt-10 h-[100px] w-full mb-10">
+                <h1 class="text-white text-[35px] text-center p-2">Product</h1>
+            </div>
+            <div id="productSearch" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="border-2 mx-auto w-[300px] hover:cursor-pointer">
+                    <a href="./product1.html">
+                        <div class="aspect-square w-full h-64 bg-gray-200">
+                            <img class="w-full h-full object-contain p-10" src="./img/nike_1.png" alt="">
+                        </div>
+                    </a>
+                    <h2 class="text-[20px] font-bold p-6">Nike Air Force 1</h2>
+                    <div class="p-6 -mt-8 flex justify-between items-center">
+                        <span class="text-[18px] text-blue-500">2500฿</span>
+                        <button class="addToCart bg-blue-600 py-1 px-2 text-white">Add To Cart</button>
+                    </div>
+
+                </div>
+                <div class="border-2 mx-auto   w-[300px] hover:cursor-pointer">
+                    <a href="./product2.html">
+                        <div class="w-full h-64 bg-gray-200">
+                            <img class="w-full h-full object-contain p10" src="./img/Nike Air Max.png" alt="">
+                        </div>
+                    </a>
+                    <h2 class="text-[20px] font-bold p-6">Nike Air Max</h2>
+                    <div class="p-6 -mt-8 flex justify-between items-center">
+                        <span class="text-[18px] text-blue-500">3500฿</span>
+                        <button class="addToCart bg-blue-600 py-1 px-2 text-white">Add To Cart</button>
+                    </div>
+
+                </div>
+                <div class="border-2 mx-auto  w-[300px] hover:cursor-pointer">
+                    <a href="./product3.html">
+                        <div class="w-full h-64 bg-gray-200">
+                            <img class="w-full h-full object-contain p-4" src="./img/nikeyellow.png" alt="">
+                        </div>
+                    </a>
+                    <h2 class="text-[20px] font-bold p-6">Nike Air Jodan</h2>
+                    <div class="p-6 -mt-8 flex justify-between items-center">
+                        <span class="text-[18px] text-blue-500">2000฿</span>
+                        <button class="addToCart bg-blue-600 py-1 px-2 text-white">Add To Cart</button>
+                    </div>
+
+                </div>
+                <div class="border-2 mx-auto w-[300px] hover:cursor-pointer">
+                    <a href="./product4.html">
+                        <div class="w-full h-64 bg-gray-200">
+                            <img class="w-full h-full object-contain p-4" src="./img/nikejo.png" alt="">
+                        </div>
+                    </a>
+                    <h2 class="text-[20px] font-bold p-6">Nike Air Jodan (White)</h2>
+                    <div class="p-6 -mt-8 flex justify-between items-center">
+                        <span class="text-[18px] text-blue-500">2500฿</span>
+                        <button class="addToCart bg-blue-600 py-1 px-2 text-white">Add To Cart</button>
+                    </div>
+
+                </div>
+                <div class="border-2 mx-auto w-[300px] hover:cursor-pointer">
+                    <a href="./product5.html">
+                        <div class="w-full h-64 bg-gray-200">
+                            <img class="w-full h-full object-contain p-4" src="./img/nike1.png" alt="">
+                        </div>
+                    </a>
+                    <h2 class="text-[20px] font-bold p-6">Nike Air </h2>
+                    <div class="p-6 -mt-8 flex justify-between items-center">
+                        <span class="text-[18px] text-blue-500">2500฿</span>
+                        <button class="addToCart bg-blue-600 py-1 px-2 text-white">Add To Cart </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-gray-200 mt-10">
+        <!-- Main Footer Content -->
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ชื่อบริษัท</h3>
+                    <p class="mb-4">เราคือผู้นำด้านรองเท้ากีฬาและแฟชั่น พร้อมให้บริการคุณด้วยสินค้าคุณภาพ</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400">Facebook</a>
+                        <a href="#" class="hover:text-blue-400">Instagram</a>
+                        <a href="#" class="hover:text-blue-400">Twitter</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">หน้าแรก</a></li>
+                        <li><a href="#" class="hover:text-blue-400">สินค้าทั้งหมด</a></li>
+                        <li><a href="#" class="hover:text-blue-400">โปรโมชั่น</a></li>
+                        <li><a href="#" class="hover:text-blue-400">เกี่ยวกับเรา</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ติดต่อเรา</h3>
+                    <ul class="space-y-2">
+                        <li>12344556</li>
+                        <li>ปทุมธานี 12120</li>
+                        <li>โทร: 02-xxx-xxxx</li>
+                        <li>อีเมล: non@example.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">รับข่าวสาร</h3>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="กรอกอีเมลของคุณ"
+                            class="w-full px-4 py-2 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <button type="submit"
+                            class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                            สมัครรับข่าวสาร
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchIcon = document.getElementById("searchIcon");
+            const searchBox = document.getElementById("searchBox");
+            const menuToggle = document.getElementById("menuToggle");
+            const menuList = document.getElementById("menuList");
+
+            // แสดง/ซ่อนช่องค้นหา
+            searchIcon.addEventListener("click", function (event) {
+                event.stopPropagation();
+                searchBox.classList.toggle("hidden");
+            });
+
+            // ปิด searchBox ถ้าคลิกที่อื่น
+            document.addEventListener("click", function (event) {
+                if (
+                    !searchBox.contains(event.target) &&
+                    !searchIcon.contains(event.target)
+                ) {
+                    searchBox.classList.add("hidden");
+                }
+            });
+
+            // แสดง/ซ่อนเมนู
+            menuToggle.addEventListener("click", function (event) {
+                event.stopPropagation();
+                menuList.classList.toggle("hidden");
+            });
+
+            // ปิดเมนูถ้าคลิกที่นอกเมนู
+            document.addEventListener("click", function (event) {
+                if (
+                    !menuList.contains(event.target) &&
+                    !menuToggle.contains(event.target)
+                ) {
+                    menuList.classList.add("hidden");
+                }
+            });
+        });
+
+        document.getElementById("searchBox").addEventListener("input", function () {
+            let filter = this.value.toLowerCase();
+            let items = document.querySelectorAll("#productSearch > div");
+
+            items.forEach(item => {
+                let title = item.querySelector("h2").textContent.toLowerCase();
+                if (title.includes(filter)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const cart = document.getElementById("cart");
+            const cartmenu = document.getElementById("cartmenu");
+            const closemenu = document.getElementById("closemenu");
+
+            cart.addEventListener("click", function (event) {
+                event.stopPropagation();
+                cartmenu.classList.toggle("hidden");
+            });
+
+            closemenu.addEventListener("click", function () {
+                cartmenu.classList.add("hidden");
+            });
+
+            loadCart();
+
+
+            function addToCart(name, price, img) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let product = cart.find((item) => item.name === name);
+
+                if (product) {
+                    product.quantity++;
+                } else {
+                    cart.push({ name, price, img, quantity: 1 });
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                loadCart();
+            }
+
+
+            function loadCart() {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let cartItem = document.getElementById("cartItem");
+                let totalElement = document.getElementById("total");
+                cartItem.innerHTML = "";
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    total += item.price * item.quantity;
+
+                    let cartRow = document.createElement("div");
+                    cartRow.classList.add(
+                        "flex",
+                        "items-center",
+                        "justify-between",
+                        "border-b",
+                        "py-2"
+                    );
+
+                    cartRow.innerHTML = `
+    <img src="${item.img}" class="w-16 h-16 object-contain">
+    <span class="flex-1 text-center">${item.name}</span>
+    <span>${item.price}฿</span>
+    <div class="flex items-center ml-2">
+        <button class="bg-red-500 text-white px-2" onclick="updateQuantity(${index}, -1)">-</button>
+        <span class="mx-2">${item.quantity}</span>
+        <button class="bg-green-500 text-white px-2" onclick="updateQuantity(${index}, 1)">+</button>
+    </div>
+          `;
+
+                    cartItem.appendChild(cartRow);
+                });
+
+                totalElement.textContent = total;
+
+                let checkoutButton = document.createElement("button");
+                checkoutButton.classList.add("bg-blue-600", "text-white", "py-2", "w-full", "mt-4");
+                checkoutButton.textContent = "ชำระสินค้า";
+                checkoutButton.addEventListener("click", checkoutAllItems); // ฟังก์ชันการชำระสินค้าทั้งหมด
+
+                cartItem.appendChild(checkoutButton);
+
+                // ซ่อนปุ่มชำระถ้าตะกร้าว่าง
+                if (cart.length === 0) {
+                    checkoutButton.style.display = "none";
+                } else {
+                    checkoutButton.style.display = "block";
+                }
+            }
+
+
+            window.updateQuantity = function (index, change) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                if (cart[index]) {
+                    cart[index].quantity += change;
+                    if (cart[index].quantity < 1) {
+                        cart.splice(index, 1);
+                    }
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    loadCart();
+                }
+            };
+
+            document.querySelectorAll(".addToCart").forEach((button) => {
+                button.addEventListener("click", () => {
+                    let productDiv = button.closest("div.border-2");
+                    let name = productDiv.querySelector("h2").textContent;
+                    let price = parseInt(
+                        productDiv
+                            .querySelector("span.text-blue-500")
+                            .textContent.replace("฿", "")
+                    );
+                    let img = productDiv.querySelector("img").src;
+                    addToCart(name, price, img);
+                });
+            });
+
+            function checkoutAllItems() {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let totalAmount = 0;
+
+                cart.forEach(item => {
+                    totalAmount += item.price * item.quantity;
+                });
+
+                alert(`การชำระเงินทั้งหมด: ${totalAmount}฿`);
+
+
+                localStorage.removeItem("cart");
+                loadCart();
+            }
+        });
+    </script>
+</body>
+
+</html>
